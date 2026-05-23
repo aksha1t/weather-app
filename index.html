@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font: clean & modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <div class="container">
+
+      <!-- App Title -->
+      <h1 class="app-title">🌤️ WeatherNow</h1>
+
+      <!-- Search Section -->
+      <div class="search-box">
+        <input
+          type="text"
+          id="city-input"
+          class="search-input"
+          placeholder="Search city..."
+          autocomplete="off"
+        />
+        <button id="search-btn" class="search-btn">Search</button>
+      </div>
+
+      <!-- Error Message (hidden by default) -->
+      <div id="error-msg" class="error-msg hidden">
+        ❌ City not found. Please try again.
+      </div>
+
+      <!-- Loading Spinner (hidden by default) -->
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>Fetching weather...</p>
+      </div>
+
+      <!-- Weather Card (hidden by default, shown after search) -->
+      <div id="weather-card" class="weather-card">
+
+        <!-- City Name & Date -->
+        <div class="card-header">
+          <h2 class="city-name">Mumbai</h2>
+          <p class="date">Saturday, 23 May 2026</p>
+        </div>
+
+        <!-- Weather Icon & Temperature -->
+        <div class="card-main">
+          <img
+            id="weather-icon"
+            class="weather-icon"
+            src="https://openweathermap.org/img/wn/01d@2x.png"
+            alt="Weather icon"
+          />
+          <div class="temp-box">
+            <span class="temperature">32</span>
+            <span class="unit">°C</span>
+          </div>
+        </div>
+
+        <!-- Condition Label -->
+        <p class="condition">Clear Sky</p>
+
+        <!-- Extra Details Row -->
+        <div class="details-row">
+          <div class="detail-item">
+            <span class="detail-icon">💧</span>
+            <span class="detail-label">Humidity</span>
+            <span class="detail-value">68%</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">🌬️</span>
+            <span class="detail-label">Wind</span>
+            <span class="detail-value">14 km/h</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-icon">👁️</span>
+            <span class="detail-label">Feels like</span>
+            <span class="detail-value">35°C</span>
+          </div>
+        </div>
+
+      </div>
+      <!-- end weather-card -->
+
+    </div>
+    <!-- end container -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
